@@ -70,31 +70,36 @@
     items.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---------- Hero video: lazy attach, pause on hidden tab ----------
-     The <video> ships with only a poster; the mp4 source is attached
-     after page load, and never on reduced-motion or Save-Data. */
+  /* ---------- Lazy background videos (hero, about…) ----------
+     Every <video data-src> ships with only a poster; the mp4 source is
+     attached after page load, and never on reduced-motion or Save-Data.
+     All attached videos pause while the tab is hidden. */
   function initHeroVideo() {
-    var video = document.getElementById("hero-video");
-    if (!video) return;
+    var videos = Array.prototype.slice.call(document.querySelectorAll("video[data-src]"));
+    if (!videos.length) return;
 
     var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var saveData = navigator.connection && navigator.connection.saveData;
-    if (reducedMotion || saveData) return; // poster only
+    if (reducedMotion || saveData) return; // posters only
 
     function attach() {
-      if (video.src) return;
-      video.src = video.getAttribute("data-src");
-      video.play().catch(function () { /* autoplay blocked → poster stays */ });
+      videos.forEach(function (video) {
+        if (video.src) return;
+        video.src = video.getAttribute("data-src");
+        video.play().catch(function () { /* autoplay blocked → poster stays */ });
+      });
     }
 
-    // Wait for full page load so the video never competes with critical assets
+    // Wait for full page load so videos never compete with critical assets
     if (document.readyState === "complete") attach();
     else window.addEventListener("load", attach);
 
     document.addEventListener("visibilitychange", function () {
-      if (!video.src) return;
-      if (document.hidden) video.pause();
-      else video.play().catch(function () {});
+      videos.forEach(function (video) {
+        if (!video.src) return;
+        if (document.hidden) video.pause();
+        else video.play().catch(function () {});
+      });
     });
   }
 

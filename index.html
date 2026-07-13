@@ -172,7 +172,15 @@
             </ul>
           </div>
           <figure class="about__figure gold-frame reveal">
-            <img src="assets/about-interior.jpg" alt="Intérieur Art Déco du restaurant Le Gatsby" loading="lazy" width="800" height="1000" />
+            <!-- Ambiance video: lazy-loaded like the hero (poster first, mp4
+                 attached after page load, paused when the tab is hidden) -->
+            <video class="about__video"
+                   muted loop playsinline autoplay
+                   preload="none"
+                   poster="assets/about-interior.jpg"
+                   data-src="assets/about-interior.mp4"
+                   aria-label="Ambiance au restaurant Le Gatsby"
+                   data-i18n-aria="about.video_label"></video>
           </figure>
         </div>
       </div>

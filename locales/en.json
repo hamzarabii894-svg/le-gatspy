@@ -25,7 +25,8 @@
     "p2": "Live concerts, an intimate atmosphere, attentive service: every evening at Le Gatsby is a moment out of time, between the murmur of the Atlantic and the majestic silhouette of the world's tallest minaret.",
     "badge1": "Live concerts",
     "badge2": "Romantic ambiance",
-    "badge3": "Panoramic view"
+    "badge3": "Panoramic view",
+    "video_label": "Ambiance video of Le Gatsby restaurant"
   },
   "terrace": {
     "kicker": "The jewel of Le Gatsby",
@@ -47,65 +48,265 @@
         "id": "breakfast",
         "label": "Breakfast",
         "items": [
-          { "name": "Le Gatsby Royal", "desc": "Eggs Benedict, smoked salmon, golden butter brioche", "price": 120, "badges": ["halal"] },
-          { "name": "Msemen & Amlou", "desc": "Flaky msemen, argan amlou, Atlas thyme honey", "price": 65, "badges": ["veg", "bio"] },
-          { "name": "Rooftop Bowl", "desc": "House granola, farm yogurt, seasonal fruit", "price": 70, "badges": ["veg", "bio"] },
-          { "name": "Deco Avocado Toast", "desc": "Sourdough, avocado, poached egg, toasted seeds", "price": 85, "badges": ["veg"] },
-          { "name": "Sunrise Pancakes", "desc": "Fluffy pancakes, maple syrup, red berries", "price": 75, "badges": ["veg"] }
+          {
+            "name": "Le Gatsby Royal",
+            "desc": "Eggs Benedict, smoked salmon, golden butter brioche",
+            "price": 120,
+            "badges": [
+              "halal"
+            ]
+          },
+          {
+            "name": "Msemen & Amlou",
+            "desc": "Flaky msemen, argan amlou, Atlas thyme honey",
+            "price": 65,
+            "badges": [
+              "veg",
+              "bio"
+            ]
+          },
+          {
+            "name": "Rooftop Bowl",
+            "desc": "House granola, farm yogurt, seasonal fruit",
+            "price": 70,
+            "badges": [
+              "veg",
+              "bio"
+            ]
+          },
+          {
+            "name": "Deco Avocado Toast",
+            "desc": "Sourdough, avocado, poached egg, toasted seeds",
+            "price": 85,
+            "badges": [
+              "veg"
+            ]
+          },
+          {
+            "name": "Sunrise Pancakes",
+            "desc": "Fluffy pancakes, maple syrup, red berries",
+            "price": 75,
+            "badges": [
+              "veg"
+            ]
+          }
         ]
       },
       {
         "id": "lunch",
         "label": "Lunch",
         "items": [
-          { "name": "Casablanca Salad", "desc": "Quinoa, citrus, feta, pomegranate, honey dressing", "price": 95, "badges": ["veg", "bio"] },
-          { "name": "Seafood Tagine", "desc": "Catch of the day, chermoula, preserved lemon, olives", "price": 160, "badges": ["halal"] },
-          { "name": "Art Deco Burger", "desc": "Aged beef, mature cheddar, caramelised onions", "price": 130, "badges": ["halal"] },
-          { "name": "Seafood Linguine", "desc": "Prawns, calamari, saffron bisque", "price": 150, "badges": [] },
-          { "name": "Garden Couscous", "desc": "Seasonal vegetables, chickpeas, golden raisins", "price": 110, "badges": ["vegan", "halal"] }
+          {
+            "name": "Casablanca Salad",
+            "desc": "Quinoa, citrus, feta, pomegranate, honey dressing",
+            "price": 95,
+            "badges": [
+              "veg",
+              "bio"
+            ]
+          },
+          {
+            "name": "Seafood Tagine",
+            "desc": "Catch of the day, chermoula, preserved lemon, olives",
+            "price": 160,
+            "badges": [
+              "halal"
+            ]
+          },
+          {
+            "name": "Art Deco Burger",
+            "desc": "Aged beef, mature cheddar, caramelised onions",
+            "price": 130,
+            "badges": [
+              "halal"
+            ]
+          },
+          {
+            "name": "Seafood Linguine",
+            "desc": "Prawns, calamari, saffron bisque",
+            "price": 150,
+            "badges": []
+          },
+          {
+            "name": "Garden Couscous",
+            "desc": "Seasonal vegetables, chickpeas, golden raisins",
+            "price": 110,
+            "badges": [
+              "vegan",
+              "halal"
+            ]
+          }
         ]
       },
       {
         "id": "dinner",
         "label": "Dinner",
         "items": [
-          { "name": "Gatsby Beef Fillet", "desc": "Grilled fillet, thyme jus, melting potatoes", "price": 280, "badges": ["halal"] },
-          { "name": "Grilled Sea Bass", "desc": "Confit fennel, citrus beurre blanc", "price": 220, "badges": [] },
-          { "name": "Slow-Cooked Lamb Shoulder", "desc": "Cooked for 7 hours, fragrant semolina, toasted almonds", "price": 240, "badges": ["halal"] },
-          { "name": "Mushroom & Truffle Risotto", "desc": "Carnaroli rice, wild mushrooms, truffle oil", "price": 180, "badges": ["veg"] },
-          { "name": "Free-Range Chicken with Preserved Lemons", "desc": "Organic poultry, purple olives, fresh coriander", "price": 165, "badges": ["halal", "bio"] }
+          {
+            "name": "Gatsby Beef Fillet",
+            "desc": "Grilled fillet, thyme jus, melting potatoes",
+            "price": 280,
+            "badges": [
+              "halal"
+            ]
+          },
+          {
+            "name": "Grilled Sea Bass",
+            "desc": "Confit fennel, citrus beurre blanc",
+            "price": 220,
+            "badges": []
+          },
+          {
+            "name": "Slow-Cooked Lamb Shoulder",
+            "desc": "Cooked for 7 hours, fragrant semolina, toasted almonds",
+            "price": 240,
+            "badges": [
+              "halal"
+            ]
+          },
+          {
+            "name": "Mushroom & Truffle Risotto",
+            "desc": "Carnaroli rice, wild mushrooms, truffle oil",
+            "price": 180,
+            "badges": [
+              "veg"
+            ]
+          },
+          {
+            "name": "Free-Range Chicken with Preserved Lemons",
+            "desc": "Organic poultry, purple olives, fresh coriander",
+            "price": 165,
+            "badges": [
+              "halal",
+              "bio"
+            ]
+          }
         ]
       },
       {
         "id": "desserts",
         "label": "Desserts",
         "items": [
-          { "name": "Chocolate & Gold Fondant", "desc": "Molten centre, gold leaf, Madagascar vanilla ice cream", "price": 90, "badges": ["veg"] },
-          { "name": "Citrus Pavlova", "desc": "Crisp meringue, light cream, orange segments", "price": 80, "badges": ["veg"] },
-          { "name": "Milk Pastilla", "desc": "Crispy leaves, orange-blossom cream, almonds", "price": 70, "badges": ["veg"] },
-          { "name": "Sorbet Trio", "desc": "Marrakech lemon, mango, red berries", "price": 60, "badges": ["vegan"] }
+          {
+            "name": "Chocolate & Gold Fondant",
+            "desc": "Molten centre, gold leaf, Madagascar vanilla ice cream",
+            "price": 90,
+            "badges": [
+              "veg"
+            ]
+          },
+          {
+            "name": "Citrus Pavlova",
+            "desc": "Crisp meringue, light cream, orange segments",
+            "price": 80,
+            "badges": [
+              "veg"
+            ]
+          },
+          {
+            "name": "Milk Pastilla",
+            "desc": "Crispy leaves, orange-blossom cream, almonds",
+            "price": 70,
+            "badges": [
+              "veg"
+            ]
+          },
+          {
+            "name": "Sorbet Trio",
+            "desc": "Marrakech lemon, mango, red berries",
+            "price": 60,
+            "badges": [
+              "vegan"
+            ]
+          }
         ]
       },
       {
         "id": "cocktails",
         "label": "Cocktails & Mocktails",
         "items": [
-          { "name": "The Great Gatsby", "desc": "Signature — golden citrus, orange blossom, fine bubbles", "price": 95, "badges": [] },
-          { "name": "Casablanca Sunset", "desc": "Mango, passion fruit, grenadine, over crushed ice", "price": 85, "badges": ["vegan"] },
-          { "name": "Garden Mint Mojito", "desc": "Alcohol-free — fresh mint, lime, sparkling water", "price": 75, "badges": ["vegan"] },
-          { "name": "Virgin Passion Spritz", "desc": "Passion fruit, tonic, smoked rosemary", "price": 70, "badges": ["vegan"] },
-          { "name": "Ginger Deco Fizz", "desc": "Pressed ginger, honey, lemon, candied ginger", "price": 70, "badges": [] }
+          {
+            "name": "The Great Gatsby",
+            "desc": "Signature — golden citrus, orange blossom, fine bubbles",
+            "price": 95,
+            "badges": []
+          },
+          {
+            "name": "Casablanca Sunset",
+            "desc": "Mango, passion fruit, grenadine, over crushed ice",
+            "price": 85,
+            "badges": [
+              "vegan"
+            ]
+          },
+          {
+            "name": "Garden Mint Mojito",
+            "desc": "Alcohol-free — fresh mint, lime, sparkling water",
+            "price": 75,
+            "badges": [
+              "vegan"
+            ]
+          },
+          {
+            "name": "Virgin Passion Spritz",
+            "desc": "Passion fruit, tonic, smoked rosemary",
+            "price": 70,
+            "badges": [
+              "vegan"
+            ]
+          },
+          {
+            "name": "Ginger Deco Fizz",
+            "desc": "Pressed ginger, honey, lemon, candied ginger",
+            "price": 70,
+            "badges": []
+          }
         ]
       },
       {
         "id": "cafes",
         "label": "Coffee & Tea",
         "items": [
-          { "name": "Gatsby Signature Coffee", "desc": "Arabica blend, notes of cocoa and citrus", "price": 50, "badges": ["bio"] },
-          { "name": "Mint Tea — Large Pot", "desc": "Gunpowder green tea, fresh mint, served Moroccan style", "price": 60, "badges": ["vegan"] },
-          { "name": "Hazelnut Cappuccino", "desc": "Double espresso, milk foam, hazelnut shards", "price": 55, "badges": ["veg"] },
-          { "name": "Gatsby Spiced Tea", "desc": "Black blend, cinnamon, cardamom, orange peel", "price": 65, "badges": ["vegan"] },
-          { "name": "Deluxe Hot Chocolate", "desc": "70% chocolate, house whipped cream, golden shavings", "price": 60, "badges": ["veg"] }
+          {
+            "name": "Gatsby Signature Coffee",
+            "desc": "Arabica blend, notes of cocoa and citrus",
+            "price": 50,
+            "badges": [
+              "bio"
+            ]
+          },
+          {
+            "name": "Mint Tea — Large Pot",
+            "desc": "Gunpowder green tea, fresh mint, served Moroccan style",
+            "price": 60,
+            "badges": [
+              "vegan"
+            ]
+          },
+          {
+            "name": "Hazelnut Cappuccino",
+            "desc": "Double espresso, milk foam, hazelnut shards",
+            "price": 55,
+            "badges": [
+              "veg"
+            ]
+          },
+          {
+            "name": "Gatsby Spiced Tea",
+            "desc": "Black blend, cinnamon, cardamom, orange peel",
+            "price": 65,
+            "badges": [
+              "vegan"
+            ]
+          },
+          {
+            "name": "Deluxe Hot Chocolate",
+            "desc": "70% chocolate, house whipped cream, golden shavings",
+            "price": 60,
+            "badges": [
+              "veg"
+            ]
+          }
         ]
       }
     ]
@@ -181,7 +382,10 @@
     "hours_title": "Opening Hours",
     "hours_note": "Open every day",
     "hours": [
-      { "days": "Monday – Sunday", "time": "09:00 – 00:00" }
+      {
+        "days": "Monday – Sunday",
+        "time": "09:00 – 00:00"
+      }
     ],
     "services_title": "Services",
     "services": [
