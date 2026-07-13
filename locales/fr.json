@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Le Gatsby — Restaurant Rooftop à Casablanca | Vue Mosquée Hassan II",
-    "description": "Le Gatsby, rooftop & restaurant à Casablanca avec vue directe sur la Mosquée Hassan II. Cuisine raffinée, cocktails, concerts live et terrasse panoramique au quartier Sour Jdid. Réservez votre table."
+    "title": "Le Gatsby — Café-Restaurant à Casablanca | Vue Mosquée Hassan II",
+    "description": "Le Gatsby, café-restaurant à Casablanca avec vue directe sur la Mosquée Hassan II. Cuisine raffinée, terrasse panoramique et concerts live au quartier Sour Jdid. Réservez votre table."
   },
   "nav": {
     "about": "À propos",
@@ -13,7 +13,7 @@
     "book": "Réserver"
   },
   "hero": {
-    "tagline": "Rooftop & Restaurant — Vue sur la Mosquée Hassan II",
+    "tagline": "Café-Restaurant — Vue sur la Mosquée Hassan II",
     "cta_book": "Réserver une table",
     "cta_menu": "Voir le menu",
     "scroll": "Découvrir"
@@ -21,7 +21,7 @@
   "about": {
     "kicker": "Notre histoire",
     "title": "L'élégance des années folles, l'âme de Casablanca",
-    "p1": "Perché sur les toits du quartier Sour Jdid, à quelques pas de la Mosquée Hassan II, Le Gatsby marie l'esprit Art Déco des années 20 à la douceur de vivre casablancaise. Un lieu chic mais décontracté, où l'on vient aussi bien pour un déjeuner face à l'océan que pour un dîner romantique sous les étoiles.",
+    "p1": "Au cœur du quartier Sour Jdid, face à la Mosquée Hassan II, Le Gatsby marie l'esprit Art Déco des années 20 à la douceur de vivre casablancaise. Un lieu chic mais décontracté, où l'on vient aussi bien pour un déjeuner face à l'océan que pour un dîner romantique.",
     "p2": "Concerts live, ambiance feutrée, service attentionné : chaque soirée au Gatsby est une parenthèse hors du temps, entre le murmure de l'Atlantique et la silhouette majestueuse du plus haut minaret du monde.",
     "badge1": "Concerts live",
     "badge2": "Ambiance romantique",
@@ -66,7 +66,7 @@
             ]
           },
           {
-            "name": "Bowl du Rooftop",
+            "name": "Bowl du Gatsby",
             "desc": "Granola maison, yaourt fermier, fruits de saison",
             "price": 70,
             "badges": [
@@ -322,7 +322,7 @@
       "Dessert doré",
       "Vue sur la Mosquée Hassan II",
       "Table dressée pour le dîner",
-      "Concert live sur le rooftop"
+      "Concert live au Gatsby"
     ],
     "close": "Fermer",
     "prev": "Image précédente",
@@ -384,7 +384,7 @@
     "hours": [
       {
         "days": "Lundi – Dimanche",
-        "time": "09:00 – 00:00"
+        "time": "08:00 – 00:00 (service continu)"
       }
     ],
     "services_title": "Services",
@@ -414,10 +414,10 @@
     "map_title": "Plan d'accès au restaurant Le Gatsby"
   },
   "footer": {
-    "tagline": "Rooftop & Restaurant — Casablanca",
+    "tagline": "Café-Restaurant — Casablanca",
     "nav_title": "Navigation",
     "hours_title": "Horaires",
-    "hours_line": "Ouvert tous les jours · 09:00 – 00:00",
+    "hours_line": "Ouvert tous les jours · Service continu 08:00 – 00:00",
     "follow": "Suivez-nous",
     "rights": "© Le Gatsby 2026 — Tous droits réservés"
   },
