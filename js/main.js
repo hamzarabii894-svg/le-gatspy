@@ -12,6 +12,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initNavbar();
     initReveal();
+    initHeroSlides();
     initHeroVideo();
     initGallery();
     initReservationForm();
@@ -68,6 +69,28 @@
       });
     }, { threshold: 0.12 });
     items.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------- Hero slideshow (Ken Burns over real photos) ----------
+     Slides are authored as .hero__slide divs in index.html. With one
+     slide the CSS zoom loops on its own; with several, this rotates
+     them with a crossfade every 9 seconds. */
+  function initHeroSlides() {
+    var container = document.getElementById("hero-slides");
+    if (!container) return;
+    var slides = container.querySelectorAll(".hero__slide");
+    if (slides.length < 2) return;
+
+    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reducedMotion) return; // first photo stays, static
+
+    var current = 0;
+    setInterval(function () {
+      if (document.hidden) return; // don't cycle in background tabs
+      slides[current].classList.remove("is-active");
+      current = (current + 1) % slides.length;
+      slides[current].classList.add("is-active");
+    }, 9000);
   }
 
   /* ---------- Lazy background videos (hero, about…) ----------

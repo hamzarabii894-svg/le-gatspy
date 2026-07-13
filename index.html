@@ -110,17 +110,14 @@
 
     <!-- ============ 1. HERO ============ -->
     <section class="hero" id="hero">
-      <!-- Background video: drone shot of the Hassan II Mosque → Le Gatsby rooftop.
-           The real file goes in /assets/hero.mp4 (poster: /assets/hero-poster.jpg).
-           Lazy-loaded by js/main.js: skipped on prefers-reduced-motion / Save-Data,
-           paused when the tab is hidden. -->
-      <div class="hero__media" aria-hidden="true">
-        <video id="hero-video"
-               class="hero__video"
-               muted loop playsinline autoplay
-               preload="none"
-               poster="assets/hero-poster.jpg"
-               data-src="assets/hero.mp4"></video>
+      <!-- Cinematic hero: real photos with a slow Ken Burns zoom-and-pan,
+           crossfading when several slides are present. To add a slide, add
+           another .hero__slide div below with its own background-image —
+           js/main.js picks them up automatically. Disabled under
+           prefers-reduced-motion (first photo shown static). -->
+      <div class="hero__media hero__slides" id="hero-slides" aria-hidden="true">
+        <div class="hero__slide is-active"
+             style="background-image:url('assets/terrace-mosque-view.jpg'); background-position: center 30%;"></div>
       </div>
       <div class="hero__overlay" aria-hidden="true"></div>
 
