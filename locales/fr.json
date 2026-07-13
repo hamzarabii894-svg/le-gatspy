@@ -31,13 +31,12 @@
   "terrace": {
     "kicker": "Le joyau du Gatsby",
     "title": "La Terrasse — face à la Mosquée Hassan II",
-    "text": "Notre terrasse panoramique s'ouvre directement sur la Mosquée Hassan II et l'océan Atlantique. Au coucher du soleil, le minaret s'embrase de lumière dorée — le décor le plus spectaculaire de Casablanca pour un dîner, un cocktail ou une soirée en musique.",
+    "text": "Notre terrasse panoramique s'ouvre directement sur la Mosquée Hassan II et l'océan Atlantique. Au coucher du soleil, le minaret s'embrase de lumière dorée — le décor le plus spectaculaire de Casablanca pour un dîner, un mocktail ou une soirée en musique.",
     "caption": "Vue directe sur la Mosquée Hassan II depuis la terrasse"
   },
   "menu": {
     "kicker": "La carte",
     "title": "Le Menu",
-    "kids": "Menu enfant disponible — demandez notre carte junior (plat + dessert + boisson, 80 MAD).",
     "legend": "Nos badges :",
     "badge_veg": "Végétarien",
     "badge_vegan": "Vegan",
@@ -222,8 +221,8 @@
         ]
       },
       {
-        "id": "cocktails",
-        "label": "Cocktails & Mocktails",
+        "id": "mocktails",
+        "label": "Mocktails",
         "items": [
           {
             "name": "The Great Gatsby",
@@ -241,7 +240,7 @@
           },
           {
             "name": "Mojito Menthe du Jardin",
-            "desc": "Sans alcool — menthe fraîche, citron vert, eau pétillante",
+            "desc": "Menthe fraîche, citron vert, eau pétillante",
             "price": 75,
             "badges": [
               "vegan"
@@ -308,8 +307,53 @@
             ]
           }
         ]
+      },
+      {
+        "id": "kids",
+        "label": "Menu Enfant",
+        "items": [
+          {
+            "name": "Formule Enfant",
+            "desc": "Plat + dessert + boisson au choix",
+            "price": 80,
+            "badges": []
+          },
+          {
+            "name": "Mini Burger & Frites",
+            "desc": "Steak haché, cheddar fondant, frites maison",
+            "price": 60,
+            "badges": [
+              "halal"
+            ]
+          },
+          {
+            "name": "Nuggets de Poulet & Frites",
+            "desc": "Poulet fermier pané, sauce douce",
+            "price": 55,
+            "badges": [
+              "halal"
+            ]
+          },
+          {
+            "name": "Penne à la Crème",
+            "desc": "Pâtes fondantes, crème légère, emmental râpé",
+            "price": 50,
+            "badges": [
+              "veg"
+            ]
+          },
+          {
+            "name": "Mini Pancakes au Chocolat",
+            "desc": "Deux pancakes, chocolat fondu, banane",
+            "price": 45,
+            "badges": [
+              "veg"
+            ]
+          }
+        ]
       }
-    ]
+    ],
+    "no_alcohol": "Le Gatsby ne sert pas d'alcool — toutes nos boissons sont 100 % sans alcool."
   },
   "gallery": {
     "kicker": "En images",

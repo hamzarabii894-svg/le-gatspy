@@ -31,13 +31,12 @@
   "terrace": {
     "kicker": "The jewel of Le Gatsby",
     "title": "The Terrace — facing the Hassan II Mosque",
-    "text": "Our panoramic terrace opens directly onto the Hassan II Mosque and the Atlantic Ocean. At sunset, the minaret glows with golden light — Casablanca's most spectacular backdrop for a dinner, a cocktail or an evening of live music.",
+    "text": "Our panoramic terrace opens directly onto the Hassan II Mosque and the Atlantic Ocean. At sunset, the minaret glows with golden light — Casablanca's most spectacular backdrop for a dinner, a mocktail or an evening of live music.",
     "caption": "Direct view of the Hassan II Mosque from the terrace"
   },
   "menu": {
     "kicker": "The menu",
     "title": "The Menu",
-    "kids": "Kids menu available — ask for our junior menu (main + dessert + drink, 80 MAD).",
     "legend": "Our badges:",
     "badge_veg": "Vegetarian",
     "badge_vegan": "Vegan",
@@ -222,8 +221,8 @@
         ]
       },
       {
-        "id": "cocktails",
-        "label": "Cocktails & Mocktails",
+        "id": "mocktails",
+        "label": "Mocktails",
         "items": [
           {
             "name": "The Great Gatsby",
@@ -241,7 +240,7 @@
           },
           {
             "name": "Garden Mint Mojito",
-            "desc": "Alcohol-free — fresh mint, lime, sparkling water",
+            "desc": "Fresh mint, lime, sparkling water",
             "price": 75,
             "badges": [
               "vegan"
@@ -308,8 +307,53 @@
             ]
           }
         ]
+      },
+      {
+        "id": "kids",
+        "label": "Kids Menu",
+        "items": [
+          {
+            "name": "Kids Set Menu",
+            "desc": "Main + dessert + drink of choice",
+            "price": 80,
+            "badges": []
+          },
+          {
+            "name": "Mini Burger & Fries",
+            "desc": "Beef patty, melted cheddar, house fries",
+            "price": 60,
+            "badges": [
+              "halal"
+            ]
+          },
+          {
+            "name": "Chicken Nuggets & Fries",
+            "desc": "Breaded free-range chicken, mild sauce",
+            "price": 55,
+            "badges": [
+              "halal"
+            ]
+          },
+          {
+            "name": "Creamy Penne",
+            "desc": "Soft pasta, light cream, grated emmental",
+            "price": 50,
+            "badges": [
+              "veg"
+            ]
+          },
+          {
+            "name": "Mini Chocolate Pancakes",
+            "desc": "Two pancakes, melted chocolate, banana",
+            "price": 45,
+            "badges": [
+              "veg"
+            ]
+          }
+        ]
       }
-    ]
+    ],
+    "no_alcohol": "Le Gatsby does not serve alcohol — all our drinks are 100% alcohol-free."
   },
   "gallery": {
     "kicker": "In pictures",
