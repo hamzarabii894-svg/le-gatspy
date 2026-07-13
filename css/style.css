@@ -333,15 +333,66 @@ h3 { font-size: 1.25rem; color: var(--gold); }
 .gallery__item {
   overflow: hidden; position: relative; display: block; padding: 0;
   border: 1px solid transparent;
-  transition: border-color 0.25s ease;
+  transition: border-color 0.3s ease;
 }
 .gallery__item:hover, .gallery__item:focus-visible { border-color: var(--gold); }
 .gallery__item img {
   width: 100%; height: 100%; object-fit: cover;
-  transition: transform 0.45s ease;
+  transition: transform 1.2s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
-.gallery__item:hover img { transform: scale(1.05); }
+.gallery__item:hover img, .gallery__item:focus-visible img { transform: scale(1.08); }
 .gallery__item--wide { grid-column: span 2; }
+
+/* Gold wash rising from the bottom on hover */
+.gallery__item::before {
+  content: "";
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg,
+    rgba(12, 18, 32, 0) 45%,
+    rgba(12, 18, 32, 0.55) 78%,
+    rgba(12, 18, 32, 0.88) 100%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+/* Caption (mirrors the image alt, localised by js) slides up on hover */
+.gallery__item::after {
+  content: attr(data-caption);
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 2;
+  padding: 0.7rem 0.9rem;
+  font-family: var(--font-display); font-style: italic;
+  font-size: 0.92rem; color: var(--gold-soft); text-align: left;
+  transform: translateY(0.9rem); opacity: 0;
+  transition: transform 0.45s ease, opacity 0.45s ease;
+  pointer-events: none;
+}
+.gallery__item:hover::before, .gallery__item:focus-visible::before { opacity: 1; }
+.gallery__item:hover::after, .gallery__item:focus-visible::after {
+  opacity: 1; transform: translateY(0);
+}
+
+/* Staggered cinematic reveal: items rise one after another when the
+   grid scrolls into view */
+.gallery__grid .gallery__item {
+  opacity: 0;
+  transform: translateY(28px) scale(0.97);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.gallery__grid.is-visible .gallery__item { opacity: 1; transform: none; }
+.gallery__grid.is-visible .gallery__item:nth-child(2) { transition-delay: 0.1s; }
+.gallery__grid.is-visible .gallery__item:nth-child(3) { transition-delay: 0.2s; }
+.gallery__grid.is-visible .gallery__item:nth-child(4) { transition-delay: 0.3s; }
+.gallery__grid.is-visible .gallery__item:nth-child(5) { transition-delay: 0.4s; }
+.gallery__grid.is-visible .gallery__item:nth-child(6) { transition-delay: 0.5s; }
+.gallery__grid.is-visible .gallery__item:nth-child(7) { transition-delay: 0.6s; }
+.gallery__grid.is-visible .gallery__item:nth-child(8) { transition-delay: 0.7s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery__grid .gallery__item { opacity: 1; transform: none; transition: none; }
+}
+@media (scripting: none) {
+  .gallery__grid .gallery__item { opacity: 1; transform: none; }
+}
 
 @media (max-width: 720px) {
   .gallery__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }

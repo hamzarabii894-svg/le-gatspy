@@ -226,12 +226,15 @@
     });
   }
 
-  /* Localised alt texts for gallery images */
+  /* Localised alt texts + hover captions for gallery images */
   function renderGalleryAlts() {
     var alts = t("gallery.alts");
     if (!Array.isArray(alts)) return;
-    document.querySelectorAll("#gallery-grid .gallery__item img").forEach(function (img, i) {
-      if (alts[i]) img.alt = alts[i];
+    document.querySelectorAll("#gallery-grid .gallery__item").forEach(function (item, i) {
+      if (!alts[i]) return;
+      var img = item.querySelector("img");
+      if (img) img.alt = alts[i];
+      item.setAttribute("data-caption", alts[i]); // shown by CSS on hover
     });
   }
 
