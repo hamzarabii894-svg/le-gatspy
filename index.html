@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary meta (swapped by js/i18n.js on language toggle) -->
+  <title data-i18n-doc-title>Le Gatsby — Restaurant Rooftop à Casablanca | Vue Mosquée Hassan II</title>
+  <meta name="description" data-i18n-meta-desc content="Le Gatsby, rooftop & restaurant à Casablanca avec vue directe sur la Mosquée Hassan II. Cuisine raffinée, cocktails, concerts live et terrasse panoramique au quartier Sour Jdid. Réservez votre table." />
+  <link rel="canonical" href="https://legatsby.ma/" />
+  <meta name="theme-color" content="#0C1220" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Le Gatsby" />
+  <meta property="og:title" content="Le Gatsby — Restaurant Rooftop à Casablanca | Vue Mosquée Hassan II" />
+  <meta property="og:description" content="Rooftop & restaurant avec vue directe sur la Mosquée Hassan II. Cuisine raffinée, cocktails et concerts live à Casablanca." />
+  <meta property="og:url" content="https://legatsby.ma/" />
+  <meta property="og:image" content="https://legatsby.ma/assets/hero-poster.jpg" />
+  <meta property="og:locale" content="fr_MA" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Le Gatsby — Restaurant Rooftop à Casablanca" />
+  <meta name="twitter:description" content="Rooftop & restaurant avec vue directe sur la Mosquée Hassan II à Casablanca." />
+  <meta name="twitter:image" content="https://legatsby.ma/assets/hero-poster.jpg" />
+
+  <!-- Icons -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+  <!-- Fonts: Art Deco display serif + clean geometric sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Structured data: Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Le Gatsby",
+    "image": "https://legatsby.ma/assets/hero-poster.jpg",
+    "url": "https://legatsby.ma/",
+    "telephone": "+212700110110",
+    "priceRange": "50–300 MAD",
+    "servesCuisine": ["Moroccan", "Mediterranean", "International"],
+    "acceptsReservations": true,
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Angle boulevard Sidi Mohamed Ben Abdellah et Bd Sour Jdid",
+      "addressLocality": "Casablanca",
+      "postalCode": "20020",
+      "addressCountry": "MA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 33.6076,
+      "longitude": -7.6298
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "09:00",
+      "closes": "00:00"
+    }],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.0",
+      "ratingCount": "4588"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Skip link for keyboard users -->
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Aller au contenu</a>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="navbar__inner container" aria-label="Navigation principale">
+      <a href="#hero" class="navbar__brand" aria-label="Le Gatsby — accueil">
+        <img src="assets/logo.svg" alt="Le Gatsby" width="140" height="44" />
+      </a>
+
+      <button class="navbar__burger" id="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+        <li><a href="#terrace" data-i18n="nav.terrace">La Terrasse</a></li>
+        <li><a href="#menu" data-i18n="nav.menu">Menu</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">Galerie</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="#reservation" class="btn btn--gold btn--small" data-i18n="nav.book">Réserver</a></li>
+        <li>
+          <div class="lang-toggle" role="group" aria-label="Changer de langue">
+            <button type="button" data-lang="fr" class="is-active" aria-pressed="true">FR</button>
+            <span aria-hidden="true">|</span>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="hero" id="hero">
+      <!-- Background video: drone shot of the Hassan II Mosque → Le Gatsby rooftop.
+           The real file goes in /assets/hero.mp4 (poster: /assets/hero-poster.jpg).
+           Lazy-loaded by js/main.js: skipped on prefers-reduced-motion / Save-Data,
+           paused when the tab is hidden. -->
+      <div class="hero__media" aria-hidden="true">
+        <video id="hero-video"
+               class="hero__video"
+               muted loop playsinline autoplay
+               preload="none"
+               poster="assets/hero-poster.jpg"
+               data-src="assets/hero.mp4"></video>
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content container">
+        <!-- Art Deco top ornament -->
+        <svg class="deco-fan" viewBox="0 0 120 34" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1">
+            <path d="M60 32 L60 4" /><path d="M60 32 L38 8" /><path d="M60 32 L82 8" />
+            <path d="M60 32 L20 18" /><path d="M60 32 L100 18" />
+            <circle cx="60" cy="32" r="2" fill="currentColor" stroke="none" />
+          </g>
+        </svg>
+
+        <h1 class="hero__title">LE&nbsp;GATSBY</h1>
+
+        <p class="hero__tagline" data-i18n="hero.tagline">Rooftop &amp; Restaurant — Vue sur la Mosquée Hassan II</p>
+
+        <div class="hero__rule" aria-hidden="true"><span></span><i></i><span></span></div>
+
+        <div class="hero__ctas">
+          <a href="#reservation" class="btn btn--gold" data-i18n="hero.cta_book">Réserver une table</a>
+          <a href="#menu" class="btn btn--ghost" data-i18n="hero.cta_menu">Voir le menu</a>
+        </div>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-hidden="true" tabindex="-1">
+        <span data-i18n="hero.scroll">Découvrir</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ 2. ABOUT ============ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="about.kicker">Notre histoire</p>
+          <h2 data-i18n="about.title">L'élégance des années folles, l'âme de Casablanca</h2>
+          <div class="deco-divider" aria-hidden="true"><span></span><svg viewBox="0 0 40 20"><path d="M20 18 L20 4 M20 18 L8 8 M20 18 L32 8" fill="none" stroke="currentColor" stroke-width="1"/></svg><span></span></div>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text reveal">
+            <p data-i18n="about.p1">Perché sur les toits du quartier Sour Jdid, à quelques pas de la Mosquée Hassan II, Le Gatsby marie l'esprit Art Déco des années 20 à la douceur de vivre casablancaise. Un lieu chic mais décontracté, où l'on vient aussi bien pour un déjeuner face à l'océan que pour un dîner romantique sous les étoiles.</p>
+            <p data-i18n="about.p2">Concerts live, ambiance feutrée, service attentionné : chaque soirée au Gatsby est une parenthèse hors du temps, entre le murmure de l'Atlantique et la silhouette majestueuse du plus haut minaret du monde.</p>
+            <ul class="about__badges">
+              <li data-i18n="about.badge1">Concerts live</li>
+              <li data-i18n="about.badge2">Ambiance romantique</li>
+              <li data-i18n="about.badge3">Vue panoramique</li>
+            </ul>
+          </div>
+          <figure class="about__figure gold-frame reveal">
+            <img src="assets/about-interior.jpg" alt="Intérieur Art Déco du restaurant Le Gatsby" loading="lazy" width="800" height="1000" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. LA TERRASSE ============ -->
+    <section class="section terrace" id="terrace">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="terrace.kicker">Le joyau du Gatsby</p>
+          <h2 data-i18n="terrace.title">La Terrasse — face à la Mosquée Hassan II</h2>
+          <div class="deco-divider" aria-hidden="true"><span></span><svg viewBox="0 0 40 20"><path d="M20 18 L20 4 M20 18 L8 8 M20 18 L32 8" fill="none" stroke="currentColor" stroke-width="1"/></svg><span></span></div>
+          <p class="section-lede" data-i18n="terrace.text">Notre terrasse panoramique s'ouvre directement sur la Mosquée Hassan II et l'océan Atlantique. Au coucher du soleil, le minaret s'embrase de lumière dorée — le décor le plus spectaculaire de Casablanca pour un dîner, un cocktail ou une soirée en musique.</p>
+        </div>
+
+        <figure class="terrace__figure gold-frame reveal">
+          <div class="terrace__parallax" style="background-image:url('assets/terrace-mosque-view.jpg')" role="img" aria-label="Terrasse du Gatsby avec vue sur la Mosquée Hassan II"></div>
+          <figcaption data-i18n="terrace.caption">Vue directe sur la Mosquée Hassan II depuis la terrasse</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 4. MENU ============ -->
+    <section class="section menu" id="menu">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="menu.kicker">La carte</p>
+          <h2 data-i18n="menu.title">Le Menu</h2>
+          <div class="deco-divider" aria-hidden="true"><span></span><svg viewBox="0 0 40 20"><path d="M20 18 L20 4 M20 18 L8 8 M20 18 L32 8" fill="none" stroke="currentColor" stroke-width="1"/></svg><span></span></div>
+        </div>
+
+        <!-- Category tabs + panels are rendered by js/main.js from the active
+             locale dictionary (locales/fr.json & en.json → "menu.categories"),
+             so menu items live in ONE obvious place per language. -->
+        <div class="menu__tabs reveal" id="menu-tabs" role="tablist" aria-label="Catégories du menu"></div>
+        <div class="menu__panels reveal" id="menu-panels"></div>
+
+        <noscript>
+          <p style="text-align:center">Activez JavaScript pour afficher la carte complète · Enable JavaScript to view the full menu.</p>
+        </noscript>
+
+        <div class="menu__footnotes reveal">
+          <p class="menu__legend"><span data-i18n="menu.legend">Nos badges :</span>
+            <span class="badge badge--veg" data-i18n="menu.badge_veg">Végétarien</span>
+            <span class="badge badge--vegan" data-i18n="menu.badge_vegan">Vegan</span>
+            <span class="badge badge--halal" data-i18n="menu.badge_halal">Halal</span>
+            <span class="badge badge--bio" data-i18n="menu.badge_bio">Bio</span>
+          </p>
+          <p class="menu__kids" data-i18n="menu.kids">Menu enfant disponible — demandez notre carte junior (plat + dessert + boisson, 80 MAD).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. GALLERY ============ -->
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="gallery.kicker">En images</p>
+          <h2 data-i18n="gallery.title">La Galerie</h2>
+          <div class="deco-divider" aria-hidden="true"><span></span><svg viewBox="0 0 40 20"><path d="M20 18 L20 4 M20 18 L8 8 M20 18 L32 8" fill="none" stroke="currentColor" stroke-width="1"/></svg><span></span></div>
+        </div>
+
+        <!-- alt texts are localised via gallery.alts in the locale files -->
+        <div class="gallery__grid reveal" id="gallery-grid">
+          <button class="gallery__item" data-index="0"><img src="assets/gallery-1.jpg" alt="Plat signature du chef" loading="lazy" width="600" height="750" /></button>
+          <button class="gallery__item gallery__item--wide" data-index="1"><img src="assets/gallery-2.jpg" alt="Terrasse au coucher du soleil" loading="lazy" width="900" height="600" /></button>
+          <button class="gallery__item" data-index="2"><img src="assets/gallery-3.jpg" alt="Intérieur Art Déco" loading="lazy" width="600" height="750" /></button>
+          <button class="gallery__item" data-index="3"><img src="assets/gallery-4.jpg" alt="Cocktail signature" loading="lazy" width="600" height="750" /></button>
+          <button class="gallery__item" data-index="4"><img src="assets/gallery-5.jpg" alt="Dessert doré" loading="lazy" width="600" height="750" /></button>
+          <button class="gallery__item gallery__item--wide" data-index="5"><img src="assets/gallery-6.jpg" alt="Vue sur la Mosquée Hassan II" loading="lazy" width="900" height="600" /></button>
+          <button class="gallery__item" data-index="6"><img src="assets/gallery-7.jpg" alt="Table dressée pour le dîner" loading="lazy" width="600" height="750" /></button>
+          <button class="gallery__item" data-index="7"><img src="assets/gallery-8.jpg" alt="Concert live sur le rooftop" loading="lazy" width="600" height="750" /></button>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galerie photo" hidden>
+        <button class="lightbox__close" id="lightbox-close" aria-label="Fermer" data-i18n-aria="gallery.close">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Image précédente" data-i18n-aria="gallery.prev">&#8249;</button>
+        <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+        <button class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Image suivante" data-i18n-aria="gallery.next">&#8250;</button>
+      </div>
+    </section>
+
+    <!-- ============ 6. RESERVATION ============ -->
+    <section class="section reservation" id="reservation">
+      <div class="container container--narrow">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="reserve.kicker">Votre table vous attend</p>
+          <h2 data-i18n="reserve.title">Réservation</h2>
+          <div class="deco-divider" aria-hidden="true"><span></span><svg viewBox="0 0 40 20"><path d="M20 18 L20 4 M20 18 L8 8 M20 18 L32 8" fill="none" stroke="currentColor" stroke-width="1"/></svg><span></span></div>
+          <p class="reservation__note">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <span data-i18n="reserve.note">Réservation recommandée pour le dîner</span>
+          </p>
+        </div>
+
+        <!-- Posts JSON to /api/reserve (Vercel serverless → Resend email).
+             If email isn't configured or the request fails, js/main.js falls
+             back to a prefilled WhatsApp message so bookings always work. -->
+        <form class="res-form gold-frame reveal" id="reservation-form" novalidate>
+          <!-- Honeypot anti-spam: hidden from humans, bots fill it in -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="res-form__grid">
+            <div class="field">
+              <label for="res-name" data-i18n="reserve.name">Nom complet</label>
+              <input type="text" id="res-name" name="name" autocomplete="name" data-i18n-placeholder="reserve.name_ph" placeholder="Votre nom et prénom" required />
+              <p class="field__error" data-error-for="name" role="alert" hidden data-i18n="reserve.err_name">Veuillez indiquer votre nom complet.</p>
+            </div>
+
+            <div class="field">
+              <label for="res-phone" data-i18n="reserve.phone">Téléphone</label>
+              <input type="tel" id="res-phone" name="phone" autocomplete="tel" placeholder="+212 6 00 00 00 00" required />
+              <p class="field__error" data-error-for="phone" role="alert" hidden data-i18n="reserve.err_phone">Veuillez indiquer un numéro de téléphone valide.</p>
+            </div>
+
+            <div class="field">
+              <label for="res-email" data-i18n="reserve.email">Email</label>
+              <input type="email" id="res-email" name="email" autocomplete="email" data-i18n-placeholder="reserve.email_ph" placeholder="vous@exemple.com" required />
+              <p class="field__error" data-error-for="email" role="alert" hidden data-i18n="reserve.err_email">Veuillez indiquer une adresse email valide.</p>
+            </div>
+
+            <div class="field">
+              <label for="res-date" data-i18n="reserve.date">Date</label>
+              <input type="date" id="res-date" name="date" required />
+              <p class="field__error" data-error-for="date" role="alert" hidden data-i18n="reserve.err_date">Veuillez choisir une date (à partir d'aujourd'hui).</p>
+            </div>
+
+            <div class="field">
+              <label for="res-time" data-i18n="reserve.time">Heure</label>
+              <select id="res-time" name="time" required>
+                <!-- 12:00 → 23:30, 30-min steps — filled by js/main.js -->
+              </select>
+              <p class="field__error" data-error-for="time" role="alert" hidden data-i18n="reserve.err_time">Veuillez choisir une heure.</p>
+            </div>
+
+            <div class="field">
+              <label for="res-guests" data-i18n="reserve.guests">Nombre de personnes</label>
+              <select id="res-guests" name="guests" required>
+                <!-- 1 → 12+ — filled by js/main.js -->
+              </select>
+              <p class="field__error" data-error-for="guests" role="alert" hidden data-i18n="reserve.err_guests">Veuillez indiquer le nombre de personnes.</p>
+            </div>
+
+            <div class="field field--full">
+              <label for="res-seating" data-i18n="reserve.seating">Préférence de placement</label>
+              <select id="res-seating" name="seating" required>
+                <option value="terrace" data-i18n="reserve.seat_terrace">Terrasse</option>
+                <option value="indoor" data-i18n="reserve.seat_indoor">Salle intérieure</option>
+                <option value="private" data-i18n="reserve.seat_private">Salle privée</option>
+              </select>
+              <p class="field__error" data-error-for="seating" role="alert" hidden data-i18n="reserve.err_seating">Veuillez choisir un placement.</p>
+            </div>
+
+            <div class="field field--full">
+              <label for="res-requests" data-i18n="reserve.requests">Demandes particulières</label>
+              <textarea id="res-requests" name="requests" rows="3" data-i18n-placeholder="reserve.requests_ph" placeholder="Anniversaire, allergies, chaise bébé…"></textarea>
+            </div>
+          </div>
+
+          <p class="res-form__senderr" id="res-send-error" role="alert" hidden data-i18n="reserve.err_send">L'envoi a échoué — votre demande va s'ouvrir dans WhatsApp.</p>
+
+          <button type="submit" class="btn btn--gold btn--wide" id="res-submit" data-i18n="reserve.submit">Envoyer ma demande</button>
+
+          <p class="res-form__or"><span data-i18n="reserve.or">ou</span></p>
+
+          <a class="btn btn--whatsapp btn--wide" id="whatsapp-btn"
+             href="https://wa.me/212700110110?text=Bonjour%20Le%20Gatsby%2C%20je%20souhaite%20r%C3%A9server%20une%20table."
+             target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.5-1.4-.7-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3Z"/></svg>
+            <span data-i18n="reserve.whatsapp">Réserver via WhatsApp</span>
+          </a>
+        </form>
+
+        <!-- Success state (shown instead of the form after a successful send) -->
+        <div class="res-success gold-frame reveal" id="reservation-success" hidden>
+          <svg class="deco-fan" viewBox="0 0 120 34" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1">
+              <path d="M60 32 L60 4" /><path d="M60 32 L38 8" /><path d="M60 32 L82 8" />
+              <path d="M60 32 L20 18" /><path d="M60 32 L100 18" />
+              <circle cx="60" cy="32" r="2" fill="currentColor" stroke="none" />
+            </g>
+          </svg>
+          <h3 data-i18n="reserve.success_title">Demande envoyée</h3>
+          <p data-i18n="reserve.success">Votre demande de réservation a bien été envoyée — nous vous confirmerons par téléphone.</p>
+          <button type="button" class="btn btn--ghost" id="res-again" data-i18n="reserve.another">Faire une autre demande</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. PRACTICAL INFO ============ -->
+    <section class="section info" id="info">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="info.kicker">Bon à savoir</p>
+          <h2 data-i18n="info.title">Infos pratiques</h2>
+          <div class="deco-divider" aria-hidden="true"><span></span><svg viewBox="0 0 40 20"><path d="M20 18 L20 4 M20 18 L8 8 M20 18 L32 8" fill="none" stroke="currentColor" stroke-width="1"/></svg><span></span></div>
+        </div>
+
+        <div class="info__grid">
+          <div class="info__card reveal">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            <h3 data-i18n="info.hours_title">Horaires</h3>
+            <p class="info__hint" data-i18n="info.hours_note">Ouvert tous les jours</p>
+            <!-- Hours rendered by js/main.js from info.hours in the locale files -->
+            <ul id="info-hours"></ul>
+          </div>
+
+          <div class="info__card reveal">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M4 19h16M6 19V9a6 6 0 0 1 12 0v10M9 5.5V4m6 1.5V4"/></svg>
+            <h3 data-i18n="info.services_title">Services</h3>
+            <ul id="info-services"></ul>
+          </div>
+
+          <div class="info__card reveal">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
+            <h3 data-i18n="info.pay_title">Paiements</h3>
+            <ul id="info-payments"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8. CONTACT & LOCATION ============ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="contact.kicker">Nous trouver</p>
+          <h2 data-i18n="contact.title">Contact &amp; Localisation</h2>
+          <div class="deco-divider" aria-hidden="true"><span></span><svg viewBox="0 0 40 20"><path d="M20 18 L20 4 M20 18 L8 8 M20 18 L32 8" fill="none" stroke="currentColor" stroke-width="1"/></svg><span></span></div>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__details reveal">
+            <div class="contact__block">
+              <h3 data-i18n="contact.address_title">Adresse</h3>
+              <p data-i18n="contact.address">Angle boulevard Sidi Mohamed Ben Abdellah et Bd Sour Jdid, Casablanca 20020, Maroc</p>
+            </div>
+            <div class="contact__block">
+              <h3 data-i18n="contact.phone_title">Téléphone</h3>
+              <p><a href="tel:+212700110110" class="contact__tel">+212&nbsp;7&nbsp;00&nbsp;11&nbsp;01&nbsp;10</a></p>
+            </div>
+            <a class="btn btn--gold" target="_blank" rel="noopener"
+               href="https://www.google.com/maps/dir/?api=1&destination=J95C%2B23%20Casablanca">
+              <span data-i18n="contact.directions">Itinéraire</span>
+            </a>
+          </div>
+
+          <div class="contact__map gold-frame reveal">
+            <iframe
+              title="Plan d'accès au restaurant Le Gatsby"
+              data-i18n-title="contact.map_title"
+              src="https://www.google.com/maps?q=J95C%2B23%20Casablanca%2C%20Morocco&z=16&output=embed"
+              width="600" height="420" style="border:0"
+              allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ 9. FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="assets/logo.svg" alt="Le Gatsby" width="170" height="54" loading="lazy" />
+          <p data-i18n="footer.tagline">Rooftop &amp; Restaurant — Casablanca</p>
+          <div class="lang-toggle" role="group" aria-label="Changer de langue">
+            <button type="button" data-lang="fr" class="is-active" aria-pressed="true">FR</button>
+            <span aria-hidden="true">|</span>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+
+        <nav class="footer__nav" aria-label="Navigation pied de page">
+          <h3 data-i18n="footer.nav_title">Navigation</h3>
+          <ul>
+            <li><a href="#about" data-i18n="nav.about">À propos</a></li>
+            <li><a href="#terrace" data-i18n="nav.terrace">La Terrasse</a></li>
+            <li><a href="#menu" data-i18n="nav.menu">Menu</a></li>
+            <li><a href="#gallery" data-i18n="nav.gallery">Galerie</a></li>
+            <li><a href="#reservation" data-i18n="nav.reservation">Réservation</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__hours">
+          <h3 data-i18n="footer.hours_title">Horaires</h3>
+          <p data-i18n="footer.hours_line">Ouvert tous les jours · 09:00 – 00:00</p>
+          <p><a href="tel:+212700110110" class="contact__tel">+212 7 00 11 01 10</a></p>
+        </div>
+
+        <div class="footer__social">
+          <h3 data-i18n="footer.follow">Suivez-nous</h3>
+          <div class="footer__icons">
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 8h3V4.5h-3A4.5 4.5 0 0 0 9.5 9v2.5H7V15h2.5v6H13v-6h3l.5-3.5H13V9a1 1 0 0 1 1-1Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="deco-divider" aria-hidden="true"><span></span><svg viewBox="0 0 40 20"><path d="M20 18 L20 4 M20 18 L8 8 M20 18 L32 8" fill="none" stroke="currentColor" stroke-width="1"/></svg><span></span></div>
+        <p data-i18n="footer.rights">© Le Gatsby 2026 — Tous droits réservés</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

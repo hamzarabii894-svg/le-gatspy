@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "Le Gatsby — Rooftop Restaurant in Casablanca | Hassan II Mosque View",
+    "description": "Le Gatsby, rooftop & restaurant in Casablanca with a direct view of the Hassan II Mosque. Refined cuisine, cocktails, live concerts and a panoramic terrace in the Sour Jdid district. Book your table."
+  },
+  "nav": {
+    "about": "About",
+    "terrace": "The Terrace",
+    "menu": "Menu",
+    "gallery": "Gallery",
+    "reservation": "Reservation",
+    "contact": "Contact",
+    "book": "Book"
+  },
+  "hero": {
+    "tagline": "Rooftop & Restaurant — Overlooking the Hassan II Mosque",
+    "cta_book": "Book a Table",
+    "cta_menu": "View Menu",
+    "scroll": "Discover"
+  },
+  "about": {
+    "kicker": "Our story",
+    "title": "Roaring-twenties elegance, the soul of Casablanca",
+    "p1": "Perched above the rooftops of the Sour Jdid district, steps away from the Hassan II Mosque, Le Gatsby blends 1920s Art Deco spirit with Casablanca's easy-going charm. Upscale yet relaxed, it is the place for a lunch facing the ocean or a romantic dinner under the stars.",
+    "p2": "Live concerts, an intimate atmosphere, attentive service: every evening at Le Gatsby is a moment out of time, between the murmur of the Atlantic and the majestic silhouette of the world's tallest minaret.",
+    "badge1": "Live concerts",
+    "badge2": "Romantic ambiance",
+    "badge3": "Panoramic view"
+  },
+  "terrace": {
+    "kicker": "The jewel of Le Gatsby",
+    "title": "The Terrace — facing the Hassan II Mosque",
+    "text": "Our panoramic terrace opens directly onto the Hassan II Mosque and the Atlantic Ocean. At sunset, the minaret glows with golden light — Casablanca's most spectacular backdrop for a dinner, a cocktail or an evening of live music.",
+    "caption": "Direct view of the Hassan II Mosque from the terrace"
+  },
+  "menu": {
+    "kicker": "The menu",
+    "title": "The Menu",
+    "kids": "Kids menu available — ask for our junior menu (main + dessert + drink, 80 MAD).",
+    "legend": "Our badges:",
+    "badge_veg": "Vegetarian",
+    "badge_vegan": "Vegan",
+    "badge_halal": "Halal",
+    "badge_bio": "Organic",
+    "categories": [
+      {
+        "id": "breakfast",
+        "label": "Breakfast",
+        "items": [
+          { "name": "Le Gatsby Royal", "desc": "Eggs Benedict, smoked salmon, golden butter brioche", "price": 120, "badges": ["halal"] },
+          { "name": "Msemen & Amlou", "desc": "Flaky msemen, argan amlou, Atlas thyme honey", "price": 65, "badges": ["veg", "bio"] },
+          { "name": "Rooftop Bowl", "desc": "House granola, farm yogurt, seasonal fruit", "price": 70, "badges": ["veg", "bio"] },
+          { "name": "Deco Avocado Toast", "desc": "Sourdough, avocado, poached egg, toasted seeds", "price": 85, "badges": ["veg"] },
+          { "name": "Sunrise Pancakes", "desc": "Fluffy pancakes, maple syrup, red berries", "price": 75, "badges": ["veg"] }
+        ]
+      },
+      {
+        "id": "lunch",
+        "label": "Lunch",
+        "items": [
+          { "name": "Casablanca Salad", "desc": "Quinoa, citrus, feta, pomegranate, honey dressing", "price": 95, "badges": ["veg", "bio"] },
+          { "name": "Seafood Tagine", "desc": "Catch of the day, chermoula, preserved lemon, olives", "price": 160, "badges": ["halal"] },
+          { "name": "Art Deco Burger", "desc": "Aged beef, mature cheddar, caramelised onions", "price": 130, "badges": ["halal"] },
+          { "name": "Seafood Linguine", "desc": "Prawns, calamari, saffron bisque", "price": 150, "badges": [] },
+          { "name": "Garden Couscous", "desc": "Seasonal vegetables, chickpeas, golden raisins", "price": 110, "badges": ["vegan", "halal"] }
+        ]
+      },
+      {
+        "id": "dinner",
+        "label": "Dinner",
+        "items": [
+          { "name": "Gatsby Beef Fillet", "desc": "Grilled fillet, thyme jus, melting potatoes", "price": 280, "badges": ["halal"] },
+          { "name": "Grilled Sea Bass", "desc": "Confit fennel, citrus beurre blanc", "price": 220, "badges": [] },
+          { "name": "Slow-Cooked Lamb Shoulder", "desc": "Cooked for 7 hours, fragrant semolina, toasted almonds", "price": 240, "badges": ["halal"] },
+          { "name": "Mushroom & Truffle Risotto", "desc": "Carnaroli rice, wild mushrooms, truffle oil", "price": 180, "badges": ["veg"] },
+          { "name": "Free-Range Chicken with Preserved Lemons", "desc": "Organic poultry, purple olives, fresh coriander", "price": 165, "badges": ["halal", "bio"] }
+        ]
+      },
+      {
+        "id": "desserts",
+        "label": "Desserts",
+        "items": [
+          { "name": "Chocolate & Gold Fondant", "desc": "Molten centre, gold leaf, Madagascar vanilla ice cream", "price": 90, "badges": ["veg"] },
+          { "name": "Citrus Pavlova", "desc": "Crisp meringue, light cream, orange segments", "price": 80, "badges": ["veg"] },
+          { "name": "Milk Pastilla", "desc": "Crispy leaves, orange-blossom cream, almonds", "price": 70, "badges": ["veg"] },
+          { "name": "Sorbet Trio", "desc": "Marrakech lemon, mango, red berries", "price": 60, "badges": ["vegan"] }
+        ]
+      },
+      {
+        "id": "cocktails",
+        "label": "Cocktails & Mocktails",
+        "items": [
+          { "name": "The Great Gatsby", "desc": "Signature — golden citrus, orange blossom, fine bubbles", "price": 95, "badges": [] },
+          { "name": "Casablanca Sunset", "desc": "Mango, passion fruit, grenadine, over crushed ice", "price": 85, "badges": ["vegan"] },
+          { "name": "Garden Mint Mojito", "desc": "Alcohol-free — fresh mint, lime, sparkling water", "price": 75, "badges": ["vegan"] },
+          { "name": "Virgin Passion Spritz", "desc": "Passion fruit, tonic, smoked rosemary", "price": 70, "badges": ["vegan"] },
+          { "name": "Ginger Deco Fizz", "desc": "Pressed ginger, honey, lemon, candied ginger", "price": 70, "badges": [] }
+        ]
+      },
+      {
+        "id": "cafes",
+        "label": "Coffee & Tea",
+        "items": [
+          { "name": "Gatsby Signature Coffee", "desc": "Arabica blend, notes of cocoa and citrus", "price": 50, "badges": ["bio"] },
+          { "name": "Mint Tea — Large Pot", "desc": "Gunpowder green tea, fresh mint, served Moroccan style", "price": 60, "badges": ["vegan"] },
+          { "name": "Hazelnut Cappuccino", "desc": "Double espresso, milk foam, hazelnut shards", "price": 55, "badges": ["veg"] },
+          { "name": "Gatsby Spiced Tea", "desc": "Black blend, cinnamon, cardamom, orange peel", "price": 65, "badges": ["vegan"] },
+          { "name": "Deluxe Hot Chocolate", "desc": "70% chocolate, house whipped cream, golden shavings", "price": 60, "badges": ["veg"] }
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "kicker": "In pictures",
+    "title": "Gallery",
+    "alts": [
+      "Chef's signature dish",
+      "Terrace at sunset",
+      "Art Deco interior",
+      "Signature cocktail",
+      "Golden dessert",
+      "View of the Hassan II Mosque",
+      "Table set for dinner",
+      "Live concert on the rooftop"
+    ],
+    "close": "Close",
+    "prev": "Previous image",
+    "next": "Next image"
+  },
+  "reserve": {
+    "kicker": "Your table awaits",
+    "title": "Reservation",
+    "note": "Reservations recommended for dinner",
+    "name": "Full name",
+    "name_ph": "Your first and last name",
+    "phone": "Phone",
+    "email": "Email",
+    "email_ph": "you@example.com",
+    "date": "Date",
+    "time": "Time",
+    "time_ph": "Choose a time",
+    "guests": "Number of guests",
+    "guests_ph": "Select",
+    "guests_12plus": "12+ guests (group)",
+    "guest_singular": "guest",
+    "guest_plural": "guests",
+    "seating": "Seating preference",
+    "seat_terrace": "Terrace",
+    "seat_indoor": "Indoor",
+    "seat_private": "Private room",
+    "requests": "Special requests",
+    "requests_ph": "Birthday, allergies, high chair…",
+    "submit": "Send my request",
+    "sending": "Sending…",
+    "success_title": "Request sent",
+    "success": "Your reservation request has been sent — we will confirm by phone.",
+    "another": "Make another request",
+    "or": "or",
+    "whatsapp": "Book via WhatsApp",
+    "whatsapp_msg": "Hello Le Gatsby, I would like to book a table.",
+    "err_name": "Please enter your full name.",
+    "err_phone": "Please enter a valid phone number.",
+    "err_email": "Please enter a valid email address.",
+    "err_date": "Please choose a date (today or later).",
+    "err_time": "Please choose a time.",
+    "err_guests": "Please select the number of guests.",
+    "err_seating": "Please choose a seating option.",
+    "err_send": "Sending failed — your request will open in WhatsApp.",
+    "wa_lead": "Hello Le Gatsby, I would like to book a table:",
+    "wa_name": "Name",
+    "wa_phone": "Phone",
+    "wa_date": "Date",
+    "wa_time": "Time",
+    "wa_guests": "Guests",
+    "wa_seating": "Seating",
+    "wa_requests": "Requests"
+  },
+  "info": {
+    "title": "Practical Info",
+    "kicker": "Good to know",
+    "hours_title": "Opening Hours",
+    "hours_note": "Open every day",
+    "hours": [
+      { "days": "Monday – Sunday", "time": "09:00 – 00:00" }
+    ],
+    "services_title": "Services",
+    "services": [
+      "Dine-in",
+      "Takeaway",
+      "Delivery",
+      "Terrace",
+      "Free Wi-Fi",
+      "Live concerts",
+      "Wheelchair accessible (entrance, seating, restrooms)",
+      "Street parking"
+    ],
+    "pay_title": "Payments",
+    "payments": [
+      "Credit / debit cards",
+      "NFC mobile payments"
+    ]
+  },
+  "contact": {
+    "kicker": "Find us",
+    "title": "Contact & Location",
+    "address_title": "Address",
+    "address": "Corner of Sidi Mohamed Ben Abdellah Boulevard and Sour Jdid Boulevard, Casablanca 20020, Morocco",
+    "phone_title": "Phone",
+    "directions": "Directions",
+    "map_title": "Map to Le Gatsby restaurant"
+  },
+  "footer": {
+    "tagline": "Rooftop & Restaurant — Casablanca",
+    "nav_title": "Navigation",
+    "hours_title": "Opening Hours",
+    "hours_line": "Open every day · 09:00 – 00:00",
+    "follow": "Follow us",
+    "rights": "© Le Gatsby 2026 — All rights reserved"
+  },
+  "lang": {
+    "switch_label": "Switch language"
+  },
+  "a11y": {
+    "skip": "Skip to content"
+  }
+}

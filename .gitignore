@@ -1,0 +1,15 @@
+# Dependencies (only needed if you add tooling later)
+node_modules/
+
+# Vercel
+.vercel/
+
+# Environment files — NEVER commit API keys
+.env
+.env.*
+!.env.example
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log

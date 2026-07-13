@@ -1,0 +1,226 @@
+{
+  "meta": {
+    "title": "Le Gatsby — Restaurant Rooftop à Casablanca | Vue Mosquée Hassan II",
+    "description": "Le Gatsby, rooftop & restaurant à Casablanca avec vue directe sur la Mosquée Hassan II. Cuisine raffinée, cocktails, concerts live et terrasse panoramique au quartier Sour Jdid. Réservez votre table."
+  },
+  "nav": {
+    "about": "À propos",
+    "terrace": "La Terrasse",
+    "menu": "Menu",
+    "gallery": "Galerie",
+    "reservation": "Réservation",
+    "contact": "Contact",
+    "book": "Réserver"
+  },
+  "hero": {
+    "tagline": "Rooftop & Restaurant — Vue sur la Mosquée Hassan II",
+    "cta_book": "Réserver une table",
+    "cta_menu": "Voir le menu",
+    "scroll": "Découvrir"
+  },
+  "about": {
+    "kicker": "Notre histoire",
+    "title": "L'élégance des années folles, l'âme de Casablanca",
+    "p1": "Perché sur les toits du quartier Sour Jdid, à quelques pas de la Mosquée Hassan II, Le Gatsby marie l'esprit Art Déco des années 20 à la douceur de vivre casablancaise. Un lieu chic mais décontracté, où l'on vient aussi bien pour un déjeuner face à l'océan que pour un dîner romantique sous les étoiles.",
+    "p2": "Concerts live, ambiance feutrée, service attentionné : chaque soirée au Gatsby est une parenthèse hors du temps, entre le murmure de l'Atlantique et la silhouette majestueuse du plus haut minaret du monde.",
+    "badge1": "Concerts live",
+    "badge2": "Ambiance romantique",
+    "badge3": "Vue panoramique"
+  },
+  "terrace": {
+    "kicker": "Le joyau du Gatsby",
+    "title": "La Terrasse — face à la Mosquée Hassan II",
+    "text": "Notre terrasse panoramique s'ouvre directement sur la Mosquée Hassan II et l'océan Atlantique. Au coucher du soleil, le minaret s'embrase de lumière dorée — le décor le plus spectaculaire de Casablanca pour un dîner, un cocktail ou une soirée en musique.",
+    "caption": "Vue directe sur la Mosquée Hassan II depuis la terrasse"
+  },
+  "menu": {
+    "kicker": "La carte",
+    "title": "Le Menu",
+    "kids": "Menu enfant disponible — demandez notre carte junior (plat + dessert + boisson, 80 MAD).",
+    "legend": "Nos badges :",
+    "badge_veg": "Végétarien",
+    "badge_vegan": "Vegan",
+    "badge_halal": "Halal",
+    "badge_bio": "Bio",
+    "categories": [
+      {
+        "id": "breakfast",
+        "label": "Petit Déjeuner",
+        "items": [
+          { "name": "Le Gatsby Royal", "desc": "Œufs bénédicte, saumon fumé, brioche dorée au beurre", "price": 120, "badges": ["halal"] },
+          { "name": "Msemen & Amlou", "desc": "Msemen feuilleté, amlou d'argan, miel de thym de l'Atlas", "price": 65, "badges": ["veg", "bio"] },
+          { "name": "Bowl du Rooftop", "desc": "Granola maison, yaourt fermier, fruits de saison", "price": 70, "badges": ["veg", "bio"] },
+          { "name": "Avocado Toast Déco", "desc": "Pain au levain, avocat, œuf poché, graines torréfiées", "price": 85, "badges": ["veg"] },
+          { "name": "Pancakes Sunrise", "desc": "Pancakes moelleux, sirop d'érable, fruits rouges", "price": 75, "badges": ["veg"] }
+        ]
+      },
+      {
+        "id": "lunch",
+        "label": "Déjeuner",
+        "items": [
+          { "name": "Salade Casablanca", "desc": "Quinoa, agrumes, feta, grenade, vinaigrette au miel", "price": 95, "badges": ["veg", "bio"] },
+          { "name": "Tajine de la Mer", "desc": "Poisson du jour, chermoula, citron confit, olives", "price": 160, "badges": ["halal"] },
+          { "name": "Burger Art Déco", "desc": "Bœuf maturé, cheddar affiné, oignons caramélisés", "price": 130, "badges": ["halal"] },
+          { "name": "Linguine aux Fruits de Mer", "desc": "Crevettes, calamars, bisque safranée", "price": 150, "badges": [] },
+          { "name": "Couscous Végétal", "desc": "Légumes de saison, pois chiches, raisins dorés", "price": 110, "badges": ["vegan", "halal"] }
+        ]
+      },
+      {
+        "id": "dinner",
+        "label": "Dîner",
+        "items": [
+          { "name": "Filet de Bœuf Gatsby", "desc": "Filet grillé, jus corsé au thym, pommes fondantes", "price": 280, "badges": ["halal"] },
+          { "name": "Loup de Mer Grillé", "desc": "Fenouil confit, beurre blanc aux agrumes", "price": 220, "badges": [] },
+          { "name": "Épaule d'Agneau Confite", "desc": "Cuite 7 heures, semoule parfumée, amandes grillées", "price": 240, "badges": ["halal"] },
+          { "name": "Risotto Champignons & Truffe", "desc": "Riz carnaroli, champignons des bois, huile de truffe", "price": 180, "badges": ["veg"] },
+          { "name": "Poulet Fermier aux Citrons Confits", "desc": "Volaille bio, olives violettes, coriandre fraîche", "price": 165, "badges": ["halal", "bio"] }
+        ]
+      },
+      {
+        "id": "desserts",
+        "label": "Desserts",
+        "items": [
+          { "name": "Fondant au Chocolat & Or", "desc": "Cœur coulant, feuille d'or, glace vanille de Madagascar", "price": 90, "badges": ["veg"] },
+          { "name": "Pavlova aux Agrumes", "desc": "Meringue croquante, crème légère, suprêmes d'orange", "price": 80, "badges": ["veg"] },
+          { "name": "Pastilla au Lait", "desc": "Feuilles croustillantes, crème à la fleur d'oranger, amandes", "price": 70, "badges": ["veg"] },
+          { "name": "Trio de Sorbets", "desc": "Citron de Marrakech, mangue, fruits rouges", "price": 60, "badges": ["vegan"] }
+        ]
+      },
+      {
+        "id": "cocktails",
+        "label": "Cocktails & Mocktails",
+        "items": [
+          { "name": "The Great Gatsby", "desc": "Signature — agrumes dorés, fleur d'oranger, bulles fines", "price": 95, "badges": [] },
+          { "name": "Casablanca Sunset", "desc": "Mangue, passion, grenadine, sur glace pilée", "price": 85, "badges": ["vegan"] },
+          { "name": "Mojito Menthe du Jardin", "desc": "Sans alcool — menthe fraîche, citron vert, eau pétillante", "price": 75, "badges": ["vegan"] },
+          { "name": "Virgin Passion Spritz", "desc": "Fruit de la passion, tonic, romarin fumé", "price": 70, "badges": ["vegan"] },
+          { "name": "Ginger Déco Fizz", "desc": "Gingembre pressé, miel, citron, gingembre confit", "price": 70, "badges": [] }
+        ]
+      },
+      {
+        "id": "cafes",
+        "label": "Cafés & Thés",
+        "items": [
+          { "name": "Café Signature Gatsby", "desc": "Assemblage arabica, notes de cacao et d'agrumes", "price": 50, "badges": ["bio"] },
+          { "name": "Thé à la Menthe — Grand Pot", "desc": "Thé vert gunpowder, menthe fraîche, servi à la marocaine", "price": 60, "badges": ["vegan"] },
+          { "name": "Cappuccino Noisette", "desc": "Espresso double, mousse de lait, éclats de noisette", "price": 55, "badges": ["veg"] },
+          { "name": "Thé Gatsby aux Épices", "desc": "Mélange noir, cannelle, cardamome, écorce d'orange", "price": 65, "badges": ["vegan"] },
+          { "name": "Chocolat Chaud Deluxe", "desc": "Chocolat 70%, chantilly maison, copeaux dorés", "price": 60, "badges": ["veg"] }
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "kicker": "En images",
+    "title": "La Galerie",
+    "alts": [
+      "Plat signature du chef",
+      "Terrasse au coucher du soleil",
+      "Intérieur Art Déco",
+      "Cocktail signature",
+      "Dessert doré",
+      "Vue sur la Mosquée Hassan II",
+      "Table dressée pour le dîner",
+      "Concert live sur le rooftop"
+    ],
+    "close": "Fermer",
+    "prev": "Image précédente",
+    "next": "Image suivante"
+  },
+  "reserve": {
+    "kicker": "Votre table vous attend",
+    "title": "Réservation",
+    "note": "Réservation recommandée pour le dîner",
+    "name": "Nom complet",
+    "name_ph": "Votre nom et prénom",
+    "phone": "Téléphone",
+    "email": "Email",
+    "email_ph": "vous@exemple.com",
+    "date": "Date",
+    "time": "Heure",
+    "time_ph": "Choisir une heure",
+    "guests": "Nombre de personnes",
+    "guests_ph": "Choisir",
+    "guests_12plus": "12+ personnes (groupe)",
+    "guest_singular": "personne",
+    "guest_plural": "personnes",
+    "seating": "Préférence de placement",
+    "seat_terrace": "Terrasse",
+    "seat_indoor": "Salle intérieure",
+    "seat_private": "Salle privée",
+    "requests": "Demandes particulières",
+    "requests_ph": "Anniversaire, allergies, chaise bébé…",
+    "submit": "Envoyer ma demande",
+    "sending": "Envoi en cours…",
+    "success_title": "Demande envoyée",
+    "success": "Votre demande de réservation a bien été envoyée — nous vous confirmerons par téléphone.",
+    "another": "Faire une autre demande",
+    "or": "ou",
+    "whatsapp": "Réserver via WhatsApp",
+    "whatsapp_msg": "Bonjour Le Gatsby, je souhaite réserver une table.",
+    "err_name": "Veuillez indiquer votre nom complet.",
+    "err_phone": "Veuillez indiquer un numéro de téléphone valide.",
+    "err_email": "Veuillez indiquer une adresse email valide.",
+    "err_date": "Veuillez choisir une date (à partir d'aujourd'hui).",
+    "err_time": "Veuillez choisir une heure.",
+    "err_guests": "Veuillez indiquer le nombre de personnes.",
+    "err_seating": "Veuillez choisir un placement.",
+    "err_send": "L'envoi a échoué — votre demande va s'ouvrir dans WhatsApp.",
+    "wa_lead": "Bonjour Le Gatsby, je souhaite réserver une table :",
+    "wa_name": "Nom",
+    "wa_phone": "Téléphone",
+    "wa_date": "Date",
+    "wa_time": "Heure",
+    "wa_guests": "Personnes",
+    "wa_seating": "Placement",
+    "wa_requests": "Demandes"
+  },
+  "info": {
+    "title": "Infos pratiques",
+    "kicker": "Bon à savoir",
+    "hours_title": "Horaires",
+    "hours_note": "Ouvert tous les jours",
+    "hours": [
+      { "days": "Lundi – Dimanche", "time": "09:00 – 00:00" }
+    ],
+    "services_title": "Services",
+    "services": [
+      "Repas sur place",
+      "Vente à emporter",
+      "Livraison",
+      "Terrasse",
+      "Wi-Fi gratuit",
+      "Concerts live",
+      "Accessible PMR (entrée, places, sanitaires)",
+      "Parking dans la rue"
+    ],
+    "pay_title": "Paiements",
+    "payments": [
+      "Cartes de crédit / débit",
+      "Paiements mobiles NFC"
+    ]
+  },
+  "contact": {
+    "kicker": "Nous trouver",
+    "title": "Contact & Localisation",
+    "address_title": "Adresse",
+    "address": "Angle boulevard Sidi Mohamed Ben Abdellah et Bd Sour Jdid, Casablanca 20020, Maroc",
+    "phone_title": "Téléphone",
+    "directions": "Itinéraire",
+    "map_title": "Plan d'accès au restaurant Le Gatsby"
+  },
+  "footer": {
+    "tagline": "Rooftop & Restaurant — Casablanca",
+    "nav_title": "Navigation",
+    "hours_title": "Horaires",
+    "hours_line": "Ouvert tous les jours · 09:00 – 00:00",
+    "follow": "Suivez-nous",
+    "rights": "© Le Gatsby 2026 — Tous droits réservés"
+  },
+  "lang": {
+    "switch_label": "Changer de langue"
+  },
+  "a11y": {
+    "skip": "Aller au contenu"
+  }
+}

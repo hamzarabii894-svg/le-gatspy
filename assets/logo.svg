@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 108" role="img" aria-label="Le Gatsby">
+  <!-- Art Deco text logo: thin gold double-line frame + sunburst accents -->
+  <g fill="none" stroke="#C9A961" stroke-width="1.5">
+    <rect x="4" y="4" width="332" height="100" />
+    <rect x="10" y="10" width="320" height="88" stroke-width="0.75" />
+  </g>
+  <!-- Sunburst fan, top centre -->
+  <g fill="none" stroke="#C9A961" stroke-width="1">
+    <path d="M170 30 L170 16" />
+    <path d="M170 30 L158 19" />
+    <path d="M170 30 L182 19" />
+    <path d="M170 30 L148 25" />
+    <path d="M170 30 L192 25" />
+    <circle cx="170" cy="30" r="1.6" fill="#C9A961" stroke="none" />
+  </g>
+  <text x="170" y="70" text-anchor="middle"
+        font-family="'Playfair Display', Georgia, serif" font-size="34"
+        font-weight="600" letter-spacing="10" fill="#F3ECDC">LE GATSBY</text>
+  <!-- Bottom rule with diamond -->
+  <g stroke="#C9A961" stroke-width="1">
+    <line x1="80" y1="84" x2="158" y2="84" />
+    <line x1="182" y1="84" x2="260" y2="84" />
+    <rect x="166.5" y="80.5" width="7" height="7" transform="rotate(45 170 84)" fill="none" />
+  </g>
+</svg>
