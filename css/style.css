@@ -252,18 +252,10 @@ h3 { font-size: 1.25rem; color: var(--gold); }
 }
 
 /* ---------- 3. Terrace ---------- */
-.terrace__figure { max-width: 980px; margin-inline: auto; }
-.terrace__parallax {
-  height: clamp(300px, 55vw, 540px);
-  background-size: cover;
-  /* Keep the Hassan II Mosque (upper part of the photo) in the crop */
-  background-position: center 38%;
-  /* Parallax feel on desktop; scroll normally on touch/reduced-motion */
-  background-attachment: fixed;
-}
-@media (hover: none), (prefers-reduced-motion: reduce) {
-  .terrace__parallax { background-attachment: scroll; }
-}
+/* The photo is shown in full (no crop, no parallax), sized to stay
+   comfortable on desktop since it is a portrait image. */
+.terrace__figure { max-width: 720px; margin-inline: auto; }
+.terrace__img { width: 100%; height: auto; display: block; }
 .terrace__figure figcaption {
   text-align: center; padding: 0.9rem 0.5rem 0.4rem;
   color: var(--gold-soft); font-size: 0.85rem; letter-spacing: 0.12em;
