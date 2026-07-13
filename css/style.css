@@ -256,7 +256,8 @@ h3 { font-size: 1.25rem; color: var(--gold); }
 .terrace__parallax {
   height: clamp(300px, 55vw, 540px);
   background-size: cover;
-  background-position: center;
+  /* Keep the Hassan II Mosque (upper part of the photo) in the crop */
+  background-position: center 38%;
   /* Parallax feel on desktop; scroll normally on touch/reduced-motion */
   background-attachment: fixed;
 }
