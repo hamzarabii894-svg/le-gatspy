@@ -45,8 +45,7 @@ to change:
 
 | File | Content | Recommended size |
 | --- | --- | --- |
-| `hero.mp4` | drone video: mosque → rooftop (not included yet) | ≤ 8 MB, 1920×1080 |
-| `hero-poster.jpg` | still frame of the hero video | 1600×900 |
+| hero slides | edit the `.hero__slide` divs in `index.html` (Ken Burns slideshow) | 1600×900+ |
 | `about-interior.jpg` | interior / ambiance | 800×1000 (portrait) |
 | `terrace-mosque-view.jpg` | terrace with the mosque view | 1600×900 |
 | `gallery-1.jpg` … `gallery-8.jpg` | dishes, terrace, interior, cocktails | portrait 600×750; **2 & 6 are wide** 900×600 |
