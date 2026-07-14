@@ -40,7 +40,6 @@
     "legend": "Nos badges :",
     "badge_veg": "Végétarien",
     "badge_vegan": "Vegan",
-    "badge_halal": "Halal",
     "badge_bio": "Bio",
     "categories": [
       {
@@ -51,9 +50,7 @@
             "name": "Le Gatsby Royal",
             "desc": "Œufs bénédicte, saumon fumé, brioche dorée au beurre",
             "price": 120,
-            "badges": [
-              "halal"
-            ]
+            "badges": []
           },
           {
             "name": "Msemen & Amlou",
@@ -108,17 +105,13 @@
             "name": "Tajine de la Mer",
             "desc": "Poisson du jour, chermoula, citron confit, olives",
             "price": 160,
-            "badges": [
-              "halal"
-            ]
+            "badges": []
           },
           {
             "name": "Burger Art Déco",
             "desc": "Bœuf maturé, cheddar affiné, oignons caramélisés",
             "price": 130,
-            "badges": [
-              "halal"
-            ]
+            "badges": []
           },
           {
             "name": "Linguine aux Fruits de Mer",
@@ -131,8 +124,7 @@
             "desc": "Légumes de saison, pois chiches, raisins dorés",
             "price": 110,
             "badges": [
-              "vegan",
-              "halal"
+              "vegan"
             ]
           }
         ]
@@ -145,9 +137,7 @@
             "name": "Filet de Bœuf Gatsby",
             "desc": "Filet grillé, jus corsé au thym, pommes fondantes",
             "price": 280,
-            "badges": [
-              "halal"
-            ]
+            "badges": []
           },
           {
             "name": "Loup de Mer Grillé",
@@ -159,9 +149,7 @@
             "name": "Épaule d'Agneau Confite",
             "desc": "Cuite 7 heures, semoule parfumée, amandes grillées",
             "price": 240,
-            "badges": [
-              "halal"
-            ]
+            "badges": []
           },
           {
             "name": "Risotto Champignons & Truffe",
@@ -176,7 +164,6 @@
             "desc": "Volaille bio, olives violettes, coriandre fraîche",
             "price": 165,
             "badges": [
-              "halal",
               "bio"
             ]
           }
@@ -322,17 +309,13 @@
             "name": "Mini Burger & Frites",
             "desc": "Steak haché, cheddar fondant, frites maison",
             "price": 60,
-            "badges": [
-              "halal"
-            ]
+            "badges": []
           },
           {
             "name": "Nuggets de Poulet & Frites",
             "desc": "Poulet fermier pané, sauce douce",
             "price": 55,
-            "badges": [
-              "halal"
-            ]
+            "badges": []
           },
           {
             "name": "Penne à la Crème",

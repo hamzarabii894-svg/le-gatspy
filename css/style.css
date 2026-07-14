@@ -316,7 +316,6 @@ h3 { font-size: 1.25rem; color: var(--gold); }
 }
 .badge--veg   { color: #a8c98a; }
 .badge--vegan { color: #7fbf8e; }
-.badge--halal { color: var(--gold-soft); }
 .badge--bio   { color: #9fc4b8; }
 
 .menu__footnotes { text-align: center; margin-top: 2.6rem; color: var(--cream-dim); font-size: 0.9rem; }
