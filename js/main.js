@@ -7,7 +7,7 @@
 (function () {
   "use strict";
 
-  var WHATSAPP_NUMBER = "359885635807"; // TEMPORARY test number — revert to 212700110110 before handover
+  var WHATSAPP_NUMBER = "212700110110"; // wa.me target (no "+")
 
   document.addEventListener("DOMContentLoaded", function () {
     initNavbar();
