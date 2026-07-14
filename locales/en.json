@@ -352,8 +352,7 @@
           }
         ]
       }
-    ],
-    "no_alcohol": "Le Gatsby does not serve alcohol — all our drinks are 100% alcohol-free."
+    ]
   },
   "gallery": {
     "kicker": "In pictures",
@@ -379,7 +378,7 @@
     "name": "Full name",
     "name_ph": "Your first and last name",
     "phone": "Phone",
-    "email": "Email",
+    "email": "Email (optional)",
     "email_ph": "you@example.com",
     "date": "Date",
     "time": "Time",
@@ -395,14 +394,10 @@
     "seat_private": "Private room",
     "requests": "Special requests",
     "requests_ph": "Birthday, allergies, high chair…",
-    "submit": "Send my request",
-    "sending": "Sending…",
+    "submit": "Send via WhatsApp",
     "success_title": "Request sent",
-    "success": "Your reservation request has been sent — we will confirm by phone.",
+    "success": "Your request has opened in WhatsApp — tap Send to submit it. The restaurant will confirm directly on WhatsApp.",
     "another": "Make another request",
-    "or": "or",
-    "whatsapp": "Book via WhatsApp",
-    "whatsapp_msg": "Hello Le Gatsby, I would like to book a table.",
     "err_name": "Please enter your full name.",
     "err_phone": "Please enter a valid phone number.",
     "err_email": "Please enter a valid email address.",
@@ -410,7 +405,6 @@
     "err_time": "Please choose a time.",
     "err_guests": "Please select the number of guests.",
     "err_seating": "Please choose a seating option.",
-    "err_send": "Sending failed — your request will open in WhatsApp.",
     "wa_lead": "Hello Le Gatsby, I would like to book a table:",
     "wa_name": "Name",
     "wa_phone": "Phone",

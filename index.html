@@ -228,7 +228,6 @@
             <span class="badge badge--halal" data-i18n="menu.badge_halal">Halal</span>
             <span class="badge badge--bio" data-i18n="menu.badge_bio">Bio</span>
           </p>
-          <p class="menu__kids" data-i18n="menu.no_alcohol">Le Gatsby ne sert pas d'alcool — toutes nos boissons sont 100 % sans alcool.</p>
         </div>
       </div>
     </section>
@@ -302,7 +301,7 @@
 
             <div class="field">
               <label for="res-email" data-i18n="reserve.email">Email</label>
-              <input type="email" id="res-email" name="email" autocomplete="email" data-i18n-placeholder="reserve.email_ph" placeholder="vous@exemple.com" required />
+              <input type="email" id="res-email" name="email" autocomplete="email" data-i18n-placeholder="reserve.email_ph" placeholder="vous@exemple.com" />
               <p class="field__error" data-error-for="email" role="alert" hidden data-i18n="reserve.err_email">Veuillez indiquer une adresse email valide.</p>
             </div>
 
@@ -344,18 +343,12 @@
             </div>
           </div>
 
-          <p class="res-form__senderr" id="res-send-error" role="alert" hidden data-i18n="reserve.err_send">L'envoi a échoué — votre demande va s'ouvrir dans WhatsApp.</p>
-
-          <button type="submit" class="btn btn--gold btn--wide" id="res-submit" data-i18n="reserve.submit">Envoyer ma demande</button>
-
-          <p class="res-form__or"><span data-i18n="reserve.or">ou</span></p>
-
-          <a class="btn btn--whatsapp btn--wide" id="whatsapp-btn"
-             href="https://wa.me/212700110110?text=Bonjour%20Le%20Gatsby%2C%20je%20souhaite%20r%C3%A9server%20une%20table."
-             target="_blank" rel="noopener">
+          <!-- Submitting opens WhatsApp with the reservation prefilled; the
+               restaurant confirms or declines directly in the chat. -->
+          <button type="submit" class="btn btn--gold btn--wide btn--wa-submit" id="res-submit">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.5-1.4-.7-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.3Z"/></svg>
-            <span data-i18n="reserve.whatsapp">Réserver via WhatsApp</span>
-          </a>
+            <span data-i18n="reserve.submit">Envoyer via WhatsApp</span>
+          </button>
         </form>
 
         <!-- Success state (shown instead of the form after a successful send) -->
@@ -481,11 +474,8 @@
         <div class="footer__social">
           <h3 data-i18n="footer.follow">Suivez-nous</h3>
           <div class="footer__icons">
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/legatsbycasa/" target="_blank" rel="noopener" aria-label="Instagram — @legatsbycasa">
               <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
-            </a>
-            <a href="#" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 8h3V4.5h-3A4.5 4.5 0 0 0 9.5 9v2.5H7V15h2.5v6H13v-6h3l.5-3.5H13V9a1 1 0 0 1 1-1Z"/></svg>
             </a>
           </div>
         </div>

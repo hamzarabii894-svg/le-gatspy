@@ -1,7 +1,7 @@
 /* ==========================================================================
    LE GATSBY — main behaviour
    Navbar, reveal-on-scroll, hero video lazy-load, menu tabs, gallery
-   lightbox, practical-info lists, reservation form (API + WhatsApp fallback).
+   lightbox, practical-info lists, reservation form (via WhatsApp).
    No dependencies — IntersectionObserver + CSS transitions only.
    ========================================================================== */
 (function () {
@@ -133,7 +133,6 @@
     renderMenu();
     renderInfoLists();
     renderGalleryAlts();
-    updateWhatsAppLink();
   }
 
   /* Menu: tabs + panels built from menu.categories in the locale files */
@@ -238,13 +237,6 @@
     });
   }
 
-  /* Keep the static WhatsApp button's prefilled message in the active language */
-  function updateWhatsAppLink() {
-    var btn = document.getElementById("whatsapp-btn");
-    if (!btn) return;
-    btn.href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(t("reserve.whatsapp_msg"));
-  }
-
   /* ---------- Gallery lightbox ---------- */
   function initGallery() {
     var grid = document.getElementById("gallery-grid");
@@ -295,8 +287,6 @@
     var timeSelect = document.getElementById("res-time");
     var guestsSelect = document.getElementById("res-guests");
     var dateInput = document.getElementById("res-date");
-    var submitBtn = document.getElementById("res-submit");
-    var sendError = document.getElementById("res-send-error");
     var successBox = document.getElementById("reservation-success");
 
     // Date picker: min = today (local timezone)
@@ -317,9 +307,11 @@
       });
     }
 
+    // Reservation goes through WhatsApp: submitting opens a chat with the
+    // restaurant, the request prefilled. The restaurant then confirms or
+    // declines directly in the conversation.
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      sendError.hidden = true;
 
       var data = collectData(form);
       if (!validate(form, data)) return;
@@ -327,31 +319,8 @@
       // Honeypot filled → silently pretend success (bot traffic)
       if (data.company) { showSuccess(); return; }
 
-      submitBtn.disabled = true;
-      submitBtn.textContent = t("reserve.sending");
-
-      fetch("/api/reserve", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      })
-        .then(function (res) { return res.json().then(function (json) { return { ok: res.ok, json: json }; }); })
-        .then(function (result) {
-          if (result.ok && result.json.sent) {
-            showSuccess();
-          } else {
-            // Email not configured (or Resend refused): WhatsApp fallback
-            openWhatsAppFallback(data);
-          }
-        })
-        .catch(function () {
-          // Network error / static preview without the API: WhatsApp fallback
-          openWhatsAppFallback(data);
-        })
-        .finally(function () {
-          submitBtn.disabled = false;
-          submitBtn.textContent = t("reserve.submit");
-        });
+      sendViaWhatsApp(data);
+      showSuccess();
     });
 
     document.getElementById("res-again").addEventListener("click", function () {
@@ -370,10 +339,8 @@
       successBox.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 
-    /* When email delivery isn't available, open WhatsApp with the
-       reservation prefilled so the request still reaches the restaurant. */
-    function openWhatsAppFallback(data) {
-      sendError.hidden = false;
+    /* Open WhatsApp with the reservation prefilled as a structured message */
+    function sendViaWhatsApp(data) {
       var seatingLabel = t("reserve.seat_" + data.seating);
       var lines = [
         t("reserve.wa_lead"),
@@ -384,6 +351,7 @@
         t("reserve.wa_guests") + ": " + data.guests,
         t("reserve.wa_seating") + ": " + seatingLabel
       ];
+      if (data.email) lines.push("Email: " + data.email);
       if (data.requests) lines.push(t("reserve.wa_requests") + ": " + data.requests);
       window.open(
         "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(lines.join("\n")),
@@ -453,7 +421,7 @@
 
     setError("name", data.name.length < 2);
     setError("phone", !/^\+?[0-9 ().-]{8,20}$/.test(data.phone));
-    setError("email", !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email));
+    setError("email", data.email !== "" && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email));
     setError("date", !data.date || data.date < form.date.min);
     setError("time", !data.time);
     setError("guests", !data.guests);

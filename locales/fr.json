@@ -352,8 +352,7 @@
           }
         ]
       }
-    ],
-    "no_alcohol": "Le Gatsby ne sert pas d'alcool — toutes nos boissons sont 100 % sans alcool."
+    ]
   },
   "gallery": {
     "kicker": "En images",
@@ -379,7 +378,7 @@
     "name": "Nom complet",
     "name_ph": "Votre nom et prénom",
     "phone": "Téléphone",
-    "email": "Email",
+    "email": "Email (optionnel)",
     "email_ph": "vous@exemple.com",
     "date": "Date",
     "time": "Heure",
@@ -395,14 +394,10 @@
     "seat_private": "Salle privée",
     "requests": "Demandes particulières",
     "requests_ph": "Anniversaire, allergies, chaise bébé…",
-    "submit": "Envoyer ma demande",
-    "sending": "Envoi en cours…",
+    "submit": "Envoyer via WhatsApp",
     "success_title": "Demande envoyée",
-    "success": "Votre demande de réservation a bien été envoyée — nous vous confirmerons par téléphone.",
+    "success": "Votre demande s'est ouverte dans WhatsApp — appuyez sur Envoyer pour la transmettre. Le restaurant vous confirmera directement sur WhatsApp.",
     "another": "Faire une autre demande",
-    "or": "ou",
-    "whatsapp": "Réserver via WhatsApp",
-    "whatsapp_msg": "Bonjour Le Gatsby, je souhaite réserver une table.",
     "err_name": "Veuillez indiquer votre nom complet.",
     "err_phone": "Veuillez indiquer un numéro de téléphone valide.",
     "err_email": "Veuillez indiquer une adresse email valide.",
@@ -410,7 +405,6 @@
     "err_time": "Veuillez choisir une heure.",
     "err_guests": "Veuillez indiquer le nombre de personnes.",
     "err_seating": "Veuillez choisir un placement.",
-    "err_send": "L'envoi a échoué — votre demande va s'ouvrir dans WhatsApp.",
     "wa_lead": "Bonjour Le Gatsby, je souhaite réserver une table :",
     "wa_name": "Nom",
     "wa_phone": "Téléphone",

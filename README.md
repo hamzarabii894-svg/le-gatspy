@@ -3,24 +3,22 @@
 Premium bilingual (FR/EN) one-page website for **Le Gatsby**, an upscale rooftop
 restaurant next to the Hassan II Mosque in Casablanca.
 
-- **Stack:** static HTML/CSS/JS (zero dependencies) + one Vercel serverless
-  function for reservation emails. Static-first for maximum Lighthouse scores.
-- **Live reservation flow:** form → `/api/reserve` → email via
-  [Resend](https://resend.com). If email isn't configured yet, the form
-  automatically falls back to a **prefilled WhatsApp message** — the demo works
-  on day one, with no accounts needed.
+- **Stack:** static HTML/CSS/JS (zero dependencies). Static-first for maximum
+  Lighthouse scores.
+- **Reservation flow:** the form opens WhatsApp with the request prefilled as a
+  structured message; the restaurant confirms or declines directly in the chat.
+  No server, no accounts, works from day one. The WhatsApp number lives in
+  `js/main.js` (`WHATSAPP_NUMBER`).
 
 ```
 ├── index.html          ← the whole site (single page)
-├── api/reserve.js      ← serverless reservation email (Vercel)
 ├── assets/             ← images, logo, favicon (replace placeholders here)
 ├── css/style.css       ← all styling (Art Deco theme variables at the top)
 ├── js/main.js          ← behaviour (menu tabs, gallery, form, hero video)
 ├── js/i18n.js          ← FR/EN language engine
 ├── locales/fr.json     ← ALL French text incl. menu items & hours
 ├── locales/en.json     ← ALL English text incl. menu items & hours
-├── robots.txt / sitemap.xml
-└── .env.example        ← environment variables reference
+└── robots.txt / sitemap.xml
 ```
 
 ---
@@ -40,24 +38,7 @@ restaurant next to the Hassan II Mosque in Casablanca.
 4. After handover, add the custom domain in Vercel → Project → **Settings →
    Domains** → `legatsby.ma` (point the domain's DNS to Vercel as instructed).
 
-## 2. Enable reservation emails (Resend)
-
-Until this is done, reservation requests open in WhatsApp instead — nothing
-breaks.
-
-1. Create a free account at [resend.com](https://resend.com) and copy an API key.
-2. In Vercel → Project → **Settings → Environment Variables**, add:
-
-   | Name | Value |
-   | --- | --- |
-   | `RESEND_API_KEY` | the key from the Resend dashboard |
-   | `RESERVATION_EMAIL` | the inbox that receives reservations |
-   | `RESEND_FROM` *(optional)* | verified sender, e.g. `Le Gatsby <reservations@legatsby.ma>` — defaults to `onboarding@resend.dev`, which works without domain setup |
-
-3. Redeploy (Vercel → Deployments → ⋯ → Redeploy). Test the form: the
-   restaurant inbox receives a formatted email with a reply-to set to the guest.
-
-## 3. Replace the placeholder images
+## 2. Replace the placeholder images
 
 Drop real photos into `/assets/` **keeping the same filenames** — nothing else
 to change:
@@ -73,7 +54,7 @@ to change:
 Tips: export JPEGs at ~75% quality; keep the hero video short (10–20 s loop),
 muted, H.264. The site already lazy-loads it and skips it on slow connections.
 
-## 4. Edit menu items, prices, hours, texts
+## 3. Edit menu items, prices, hours, texts
 
 **Everything editable lives in two files:** `locales/fr.json` and
 `locales/en.json` (same structure, one per language).
@@ -87,10 +68,10 @@ muted, H.264. The site already lazy-loads it and skips it on slow connections.
 - **All other text** (headlines, form labels, error messages, meta tags):
   find the sentence in the JSON and edit it.
 
-Phone number: search for `212700110110` in `index.html` and `js/main.js`
-(WhatsApp) and `+212700110110` (tel links) to change it everywhere.
+Phone / WhatsApp number: change `WHATSAPP_NUMBER` in `js/main.js` (reservation
+chat) and search `+212700110110` in `index.html` (tel links + structured data).
 
-## 5. Run locally
+## 4. Run locally
 
 Any static server works:
 
@@ -98,8 +79,7 @@ Any static server works:
 npx serve .        # or: python3 -m http.server 8000
 ```
 
-The `/api/reserve` function only runs on Vercel (or `vercel dev`); locally the
-form simply uses the WhatsApp fallback.
+Everything works locally — the reservation form opens WhatsApp directly.
 
 ---
 
